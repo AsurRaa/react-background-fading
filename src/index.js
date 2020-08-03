@@ -3,10 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-
+import Testing from "./testing"
+import Lala from "./lolalal";
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    {/*<Testing />*/}
+    <Lala/>
   </React.StrictMode>,
   document.getElementById('root')
 );
