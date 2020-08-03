@@ -19,11 +19,15 @@ import ReactBackgroundFading from 'react-backgroud-fading'
 import 'react-backgroud-fading/dist/index.css'
 
 const Example = () => {
-  const myCustomecolors<string> = ['orange', 'gray', 'yellow', 'green', 'red']
+  const myCustomecolors:<string> = ['orange', 'gray', 'yellow', 'green', 'red']
   return(
-    return <ReactBackgroundFading height={500} width={1000} transitionTiming={5} colors={myCustomecolors}/>
-  )
-}
+    <ReactBackgroundFading height={500} width={1000} transitionTiming={5} fullAsScreen={true} colors={myCustomecolors} children={
+                <div style={{ margin: 0, padding: 0, display: 'flex' }}>
+                  <h1>Hello World</h1>
+                </div>
+        }/>
+  );
+};
 ```
 
 ## License
