@@ -11,7 +11,11 @@ const App = () => {
     alignItems: 'center'
   }}>
     <div>
-      <ReactBackgroundFading height={500} width={1000} transitionTiming={5}/>
+      <ReactBackgroundFading height={500} width={1000} transitionTiming={5} fullAsScreen={true} children={
+        <div style={{ margin: 0, padding: 0, display: 'flex' }}>
+          <h1>Hello from <a href={"https://github.com/lyhourchhen"}>ME</a> :D</h1>
+        </div>
+      }/>
     </div>
   </div>
 }

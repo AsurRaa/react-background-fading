@@ -3,19 +3,19 @@ import styled from 'styled-components'
 
 const Layout = styled.div`
   width: ${(props) => {
-    // @ts-ignore
-    return `${props.width}px`
-  }};
+  // @ts-ignore
+  return props.full ? `100vw` : `${props.width}px`
+}};
   height: ${(props) => {
-    // @ts-ignore
-    return `${props.height}px`
-  }};
+  // @ts-ignore
+  return props.full ? `100vh` : `${props.height}px`
+}};
   background-color: ${(props) => props.color};
   transition-delay: 0s;
   transition: ${(props) => {
-    // @ts-ignore
-    return `background-color ${props.time}s cubic-bezier(1, 1, 1, 1);`
-  }}
+  // @ts-ignore
+  return `background-color ${props.time}s cubic-bezier(1, 1, 1, 1);`
+}}
   };
 `
 
@@ -24,6 +24,8 @@ interface Props {
   height: number
   transitionTiming?: number
   colors?: Array<String>
+  fullAsScreen?: boolean
+  children: React.ReactNode
 }
 
 const ReactBackgroundFading: React.FC<Props> = (props) => {
@@ -48,11 +50,13 @@ const ReactBackgroundFading: React.FC<Props> = (props) => {
   return (
     // @ts-ignore
     <Layout
+      full={props.fullAsScreen}
       width={props.width}
       height={props.height}
       // @ts-ignore
       color={props.colors[index]}
       time={props.transitionTiming}
+      children={props.children}
     />
   )
 }
