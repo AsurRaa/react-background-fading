@@ -13,15 +13,16 @@ npm install --save react-backgroud-fading
 ## Usage
 
 ```tsx
-import React, { Component } from 'react'
+import ReactBackgroundFading  from 'react'
 
-import MyComponent from 'react-backgroud-fading'
+import ReactBackgroundFading from 'react-backgroud-fading'
 import 'react-backgroud-fading/dist/index.css'
 
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
+const Example = () => {
+  const myCustomecolors<string> = ['orange', 'gray', 'yellow', 'green', 'red']
+  return(
+    return <ReactBackgroundFading height={500} width={1000} transitionTiming={5} colors={myCustomecolors}/>
+  )
 }
 ```
 
