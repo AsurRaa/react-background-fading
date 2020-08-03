@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { ExampleComponent } from 'react-backgroud-fading'
+import  ExampleComponent  from 'react-backgroud-fading'
 import 'react-backgroud-fading/dist/index.css'
 
 const App = () => {
