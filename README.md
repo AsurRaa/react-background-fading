@@ -7,7 +7,7 @@
 ## Install
 
 ```bash
-npm install --save react-backgroud-fading
+yarn add react-backgroud-fading
 ```
 
 ## Usage
